@@ -182,6 +182,8 @@ cython_debug/
 #subfolders
 /leftovers
 /exp
+/env1
+env1/
 
 
 .DS_Store
