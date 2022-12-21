@@ -178,7 +178,9 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
-.leftovers/
+
+#subfolders
+/leftovers
 
 .DS_Store
 >>>>>>> f10b5fd7e5a018cde1b6406434767eb0a60d3700
