@@ -1,0 +1,81 @@
+{[Admin - добавление/изменение/удаление usera],[ Посмотреть все/поиск], [Редактировать (поиск) изменить/добавить], 8: Выход}
+
+User_types - типы пользователей  user_types.csv++
+
+по умолчанию user 0 - никто
+
+Type_index
+Админ - Admin
+Учитель - Teacher
+Ученик - Pupil/Student
+
+Users - логин users.csv
+user_id - ай ди  пользователя
+Name - имя
+Surname - Фамилия
+login - логин
+pass - пароль
+type_index - тип пользователя
+
+Subject - Предмет subject.csv
+subject_id - ай ди предмета
+subject_name - название
+
+NoteBook - сам дневник notebook.csv
+string_id
+date
+subject_id
+user_pupil_id
+user_teacherl_id
+comment
+
+init.py
+	import files()
+		return user_types, users, subjects, notebook
+
+login.py
+def login() — ввод с клавиатуры выход user_id
+
+menu.py
+	admin(users, user_types, user)
+	pupil(users, user)
+	teacher(users, user)
+
+inputs.py
+	def menu_input(user) - проверяет на корректность  возвращает число
+	def str_input - ввод строки поиска
+
+outputs.py
+	print_menu(user_id)
+	print_array(array)
+	print_array_search(array, search string)
+
+edits.py
+	delete_row(array, index)
+	add_row(array)
+	update_row(array, index)
+
+
+checks.py
+	check_user(user) -> user_type
+
+exports.py
+export_files(user_types, users, subjects, notebook))
+controller.py
+
+from login import login
+
+user_types, users, subjects, notebook = import_files()
+user = 	login()
+user_type = check_user(user)
+menu_item = 0
+while menu_item != 8:
+print_menu(user_type)
+menu_item = menu_input(user)
+if menu_item == 1:
+	admin(users, user_types, user)
+elif menu_item == 2:
+	pupil(users, user, notebook)
+elif menu_item == 3:
+teacher(users, user, notebook)
+export_files()
